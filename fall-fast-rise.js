@@ -1,0 +1,3 @@
+var scriptName="Super Rise";var scriptVersion=1.0;var scriptAuthor="soulplexis";var bHop=new BHop();var bHopClient;function BHop(){this.getName=function(){return "Up";};this.getDescription=function(){return "WHOAHhhH!!!";};this.getCategory=function(){return "Movement";};this.onUpdate=function(){mc.thePlayer.setPosition(mc.thePlayer.posX,mc.thePlayer.posY+9.25,mc.thePlayer.posZ);mc.thePlayer.motionY=2.5;}
+this.onDisable=function(){}}
+function onLoad(){};function onEnable(){bHopClient=moduleManager.registerModule(bHop);};function onDisable(){moduleManager.unregisterModule(bHopClient);};

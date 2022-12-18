@@ -1,0 +1,2 @@
+var LB=Java.type("net.ccbluex.liquidbounce.LiquidBounce");var script=registerScript({name:"AirJump",version:"Release",authors:["dizwi"]});script.registerModule({name:"AirJump",category:"Movement",description:"Matrix AirJump"},function(module){module.on("enable",function(){mc.thePlayer.motionY=0.42
+LB.commandManager.executeCommands(".toggle airjump off");});module.on("disable",function(){});});

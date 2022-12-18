@@ -1,0 +1,7 @@
+var scriptName="Setback detector + disabler";var scriptVersion=1.1;var scriptAuthor="soulplexis";var colorIndex=0;function printMessage(message){var availableColors=["§c[SAFE MODE] §f","§c[SAFE MODE] §7"];var color=availableColors[colorIndex];colorIndex+=1;if(colorIndex>=availableColors.length){colorIndex=0;}
+chat.print(color+message+"§r");}
+var highJump=new HighJump();var highJumpClient;var C03PacketPlayer=Java.type('net.minecraft.network.play.client.C03PacketPlayer');var Fly=moduleManager.getModule("Fly");var Speed=moduleManager.getModule("Speed");var AutoClicker=moduleManager.getModule("AutoClicker");function HighJump(){var flags=0;this.getName=function(){return "SafeMode";};this.getDescription=function(){return "Disables speed if you flag too many times and autoclicker mods.";};this.getCategory=function(){return "Movement";};this.onMotion=function(){if(Fly.state==false){if(mc.thePlayer.motionY==0){if(Speed.state==false){}
+if(Speed.state==true){printMessage(" Anticheat setback detected!");flags++;if(flags>=3){Speed.setState(false);printMessage(" Speed was disabled because of too many flags.");flags=0;}}}}
+if(AutoClicker.state==true&&mc.gameSettings.keyBindUseItem.pressed==true&&mc.gameSettings.keyBindAttack.pressed==true){mc.gameSettings.keyBindUseItem.pressed=false;}}
+this.onDisable=function(){}}
+function onLoad(){};function onEnable(){highJumpClient=moduleManager.registerModule(highJump);};function onDisable(){moduleManager.unregisterModule(highJumpClient);};

@@ -1,0 +1,38 @@
+{
+    "C0": {
+        "maxDelay": 10,
+        "minDelay": 5,
+        "hurtTime": 20,
+        "range": 20,
+        "blockRange": 20,
+        "throughWallsRange": 20,
+        "predictRange": 2,
+        "autoBlock": "Vanilla",
+        "attackTiming": "Frame",
+        "rotation": "Off"
+    },
+    "C1": {
+        "maxDelay": 10,
+        "minDelay": 5,
+        "hurtTime": 20,
+        "range": 20,
+        "blockRange": 20,
+        "throughWallsRange": 4,
+        "predictRange": 1.9600000381469727,
+        "autoBlock": "Packet",
+        "attackTiming": "Frame",
+        "rotation": "Silent"
+    },
+    "C2": {
+        "maxDelay": 10,
+        "minDelay": 5,
+        "hurtTime": 20,
+        "range": 4,
+        "blockRange": 5,
+        "throughWallsRange": 0,
+        "predictRange": 1,
+        "autoBlock": "Packet",
+        "attackTiming": "Frame",
+        "rotation": "Silent"
+    }
+}

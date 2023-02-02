@@ -1,0 +1,2 @@
+Math.radians=function(degrees){return degrees*Math.PI/180;}
+var script=registerScript({name:"matrixlongjump",version:"1.0.0",authors:["idk"]});script.registerModule({name:"matrixlongjump",category:"Movement",description:"Matrix longjump."},function(module){module.on("update",function(){yaw=Math.radians(mc.thePlayer.rotationYaw);mc.thePlayer.motionX=1.97*-Math.sin(yaw);mc.thePlayer.motionZ=1.97*Math.cos(yaw);mc.thePlayer.motionY=0.42;});});
